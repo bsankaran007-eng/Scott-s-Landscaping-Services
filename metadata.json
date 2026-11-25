@@ -1,0 +1,6 @@
+{
+  "name": "Estate Craft",
+  "description": "High-end residential landscaping, estate turf management, and instant property quoting for Huntsville and Madison County, North Alabama.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

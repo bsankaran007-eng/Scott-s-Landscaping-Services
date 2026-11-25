@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Estate Craft Palette Tokens */
+  --color-canvas: #F9F8F6;
+  --color-surface-card: #FFFFFF;
+  --color-earth-cream: #F4EBD9;
+  --color-botanical-tint: #F2FCF2;
+  --color-botanical-soft: #ECF6EC;
+  --color-botanical-muted: #E1EBE1;
+
+  --color-forest: #164E24;
+  --color-forest-deep: #003612;
+  --color-meadow: #2E7D32;
+  --color-sandstone: #D4A373;
+  --color-sandstone-dark: #8B5E2A;
+
+  --color-spruce: #1B241E;
+  --color-spruce-muted: #414940;
+  --color-spruce-subtle: #71796F;
+  --color-error: #BA1A1A;
+  --color-error-container: #FFDAD6;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #F9F8F6;
+    color: #1B241E;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: #F9F8F6;
+    color: #1B241E;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+  }
+
+  button, a, input, select, textarea {
+    transition-property: color, background-color, border-color, box-shadow, transform, opacity;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+
+/* Estate Craft Sunlit Ambient Shadows */
+.shadow-estate-1 {
+  box-shadow: 0 2px 8px -2px rgba(22, 78, 36, 0.05), 0 1px 4px -1px rgba(27, 36, 30, 0.04);
+}
+
+.shadow-estate-2 {
+  box-shadow: 0 12px 24px -6px rgba(22, 78, 36, 0.10), 0 4px 10px -2px rgba(27, 36, 30, 0.04);
+}
+
+.shadow-estate-3 {
+  box-shadow: 0 20px 32px -8px rgba(27, 36, 30, 0.16);
+}
+
+.border-estate-hairline {
+  border: 1px solid rgba(27, 36, 30, 0.08);
+}
+
+/* Estate Craft Form Input Styling */
+.estate-input {
+  background-color: #FFFFFF;
+  border: 1.5px solid rgba(27, 36, 30, 0.15);
+  border-radius: 0.5rem;
+  color: #1B241E;
+}
+
+.estate-input:focus {
+  outline: none;
+  border-color: #164E24;
+  box-shadow: 0 0 0 3px rgba(22, 78, 36, 0.12);
+}
+
+.estate-input-error {
+  border-color: #BA1A1A;
+  box-shadow: 0 0 0 3px rgba(186, 26, 26, 0.12);
+}
+
+/* Range Slider Styling */
+input[type="range"].estate-range {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].estate-range::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: #DBE5DB;
+}
+
+input[type="range"].estate-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 9999px;
+  background: #164E24;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 2px 6px rgba(22, 78, 36, 0.28);
+  margin-top: -8px;
+}
+
+input[type="range"].estate-range:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(22, 78, 36, 0.22);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
